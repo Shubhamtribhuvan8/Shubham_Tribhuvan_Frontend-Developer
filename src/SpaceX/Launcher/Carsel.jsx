@@ -1,6 +1,8 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Launcher from "./Launcher";
+import Carsels from "./Carsels";
 const Carsel = () => {
   return (
     <div>
@@ -43,6 +45,8 @@ const Carsel = () => {
         </Box>
       </Box>
       <br />
+      <Launcher />
+      <Carsels />
     </div>
   );
 };

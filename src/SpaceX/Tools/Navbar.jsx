@@ -11,12 +11,18 @@ export default function Navbar() {
             alt=""
           />
         </div>
-        <Link to={"/capsule"}>
+        <Link to={"/capsule"} className="navbar__link">
           <div className="navbar__item">Search All Mission</div>
         </Link>
-        <div className="navbar__item">About Us</div>
-        <div className="navbar__item">Contact</div>
-        <div className="navbar__item">Help</div>
+        <Link to={"/"} className="navbar__link">
+          <div className="navbar__item">About Us</div>
+        </Link>
+        <Link to={"/"} className="navbar__link">
+          <div className="navbar__item">Contact</div>
+        </Link>
+        <Link to={"/"} className="navbar__link">
+          <div className="navbar__item">Help</div>
+        </Link>
       </header>
     </div>
   );
