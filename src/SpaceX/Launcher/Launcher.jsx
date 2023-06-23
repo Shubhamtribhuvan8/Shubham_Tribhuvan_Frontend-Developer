@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 export default function Launcher() {
@@ -29,15 +29,12 @@ export default function Launcher() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
-  // eslint-disable-next-line no-unused-vars
   let data = useSelector((store) => {
     return store.products;
   });
 
   function HandleFilter() {
     let sorting = document.getElementById("sorting").value;
-    console.log(sorting);
-
     let limit = 12;
     let offset = 0;
     let sort = "flight_number";
@@ -74,16 +71,23 @@ export default function Launcher() {
         {data.map((item) => (
           <Grid item key={item.rocket_id} xs={6}>
             <Card>
-              <CardMedia
-                sx={{ height: 500 }}
-                image={item.flickr_images}
-                title="green iguana"
+              <LazyLoadImage
+                effect="blur"
+                src={item.flickr_images}
+                alt="green iguana"
+                height={500}
+                width="100%"
+                style={{ objectFit: "cover" }}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                   {item.rocket_name}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  style={{ textAlign: "initial" }}
+                >
                   {item.description}
                 </Typography>
               </CardContent>

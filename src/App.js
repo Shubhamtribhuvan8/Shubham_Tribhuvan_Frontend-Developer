@@ -1,13 +1,11 @@
 import "./App.css";
-// import Carousel from "./SpaceX/Launcher/Carousel";
-import Carsel from "./SpaceX/Launcher/Carsel";
-import Launcher from "./SpaceX/Launcher/Launcher";
+import Navbar from "./SpaceX/Tools/Navbar";
+import RoutesPath from "./SpaceX/Tools/Routes";
 function App() {
   return (
     <div className="App">
-      {/* <Carousel /> */}
-      <Carsel />
-      <Launcher />
+      <Navbar />
+      <RoutesPath />
     </div>
   );
 }
