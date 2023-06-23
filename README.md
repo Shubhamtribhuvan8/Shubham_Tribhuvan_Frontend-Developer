@@ -1,6 +1,10 @@
-# Getting Started with Create React App
 
-(https://drive.google.com/file/d/1AvrdGuCXMR4kBAM9vYdIIOJVSk9vnOLY/view?usp=sharing)
+## [Deployment Link](https://shubham-tribhuvan-frontend-developer.vercel.app/)
+
+## [Implementation Video Link](https://drive.google.com/file/d/1AvrdGuCXMR4kBAM9vYdIIOJVSk9vnOLY/view?usp=sharing)
+
+## What it is ?
+
 ## Available Scripts
 
 In the project directory, you can run:
