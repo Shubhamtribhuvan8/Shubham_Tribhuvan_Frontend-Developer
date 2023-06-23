@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./SpaceX/Rockets/Footer";
 import Navbar from "./SpaceX/Tools/Navbar";
 import RoutesPath from "./SpaceX/Tools/Routes";
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <Navbar />
       <RoutesPath />
+      <Footer />
     </div>
   );
 }

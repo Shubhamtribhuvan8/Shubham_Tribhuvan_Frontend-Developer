@@ -47,6 +47,8 @@ const Carsel = () => {
       <br />
       <Launcher />
       <Carsels />
+      <br />
+      <br />
     </div>
   );
 };

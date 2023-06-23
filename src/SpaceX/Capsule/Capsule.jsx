@@ -134,6 +134,7 @@ export default function CapsuleSearchForm({ onSearch }) {
           </Button>
         </Grid>
       </Grid>
+      <br />
       {searchResults.length > 0 && (
         <div>
           <h2>Space_X Results:</h2>
@@ -184,6 +185,10 @@ export default function CapsuleSearchForm({ onSearch }) {
           </Box>
         </div>
       )}
+      <br />
+      <br />
+      <br /> <br />
+      <br />
     </Box>
   );
 }

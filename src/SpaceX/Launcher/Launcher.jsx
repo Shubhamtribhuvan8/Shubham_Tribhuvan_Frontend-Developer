@@ -59,8 +59,8 @@ export default function Launcher() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">{item.company}</Button>
-                <Button size="small">{item.rocket_type}</Button>
+                <Button size="small">Space Company:{item.company}</Button>
+                <Button size="small">Rocket Type:{item.rocket_type}</Button>
               </CardActions>
             </Card>
           </Grid>
