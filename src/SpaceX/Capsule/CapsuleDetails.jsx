@@ -8,6 +8,7 @@ import {
   CardMedia,
   Typography,
   Button,
+  CircularProgress,
 } from "@mui/material";
 const styles = {
   cardContainer: {
@@ -16,14 +17,12 @@ const styles = {
     alignItems: "center",
     height: "100vh",
     card: {
-      maxWidth: 345,
+      width: "26rem",
       height: "100%",
     },
     cardMedia: {
-        height: '100%',
-        width: '100%',
-        objectFit: 'cover',
-      },
+      width: "100%",
+    },
   },
 };
 export default function CapsuleDetails() {
@@ -56,7 +55,20 @@ export default function CapsuleDetails() {
   };
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "400px",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
+      >
+        <CircularProgress size={120} />
+      </div>
+    );
   }
 
   if (!capsuleData) {
@@ -66,12 +78,13 @@ export default function CapsuleDetails() {
   const { capsule_id, status, type } = capsuleData;
   return (
     <div style={styles.cardContainer}>
-         <CardMedia
-      component="img"
-      src="https://images.unsplash.com/photo-1551871812-10ecc21ffa2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=381&q=80"
-      title="h"
-      style={styles.cardMedia}
-    />
+      <Card sx={styles.card}>
+        <CardMedia
+          component="img"
+          src="https://images.unsplash.com/photo-1551871812-10ecc21ffa2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=381&q=80"
+          title="h"
+          style={{ height: "23rem", objectFit: "none" }}
+        />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             Capsule Serial: {capsule_serial}

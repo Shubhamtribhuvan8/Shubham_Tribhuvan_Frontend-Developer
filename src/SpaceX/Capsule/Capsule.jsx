@@ -136,7 +136,7 @@ export default function CapsuleSearchForm({ onSearch }) {
       </Grid>
       {searchResults.length > 0 && (
         <div>
-          <h2>Search Results:</h2>
+          <h2>Space_X Results:</h2>
           <Grid container spacing={2}>
             {searchResults.slice(startIndex, endIndex).map((capsule) => (
               <Grid item key={capsule.capsule_id} xs={12} sm={6} md={4}>

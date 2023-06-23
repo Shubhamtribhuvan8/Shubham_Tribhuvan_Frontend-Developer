@@ -15,13 +15,16 @@ export default function Navbar() {
           <div className="navbar__item">Search All Mission</div>
         </Link>
         <Link to={"/"} className="navbar__link">
-          <div className="navbar__item">About Us</div>
+          <div className="navbar__item">Journey</div>
         </Link>
         <Link to={"/"} className="navbar__link">
-          <div className="navbar__item">Contact</div>
+          <div className="navbar__item">Orbit</div>
         </Link>
         <Link to={"/"} className="navbar__link">
-          <div className="navbar__item">Help</div>
+          <div className="navbar__item">Connect Spacex</div>
+        </Link>
+        <Link to={"/"} className="navbar__link">
+          <div className="navbar__item">Mission Mars</div>
         </Link>
       </header>
     </div>
