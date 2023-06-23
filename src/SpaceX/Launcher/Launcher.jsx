@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Action } from "../Redux/Action";
 // import { Link } from 'react-router-dom';
 import { Grid } from "@mui/material";
-
 import { Select, MenuItem, InputLabel, FormControl } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import Card from "@mui/material/Card";
@@ -73,25 +72,27 @@ export default function Launcher() {
       </FormControl>
       <Grid container spacing={2}>
         {data.map((item) => (
-          <Card key={item.rocket_id} sx={{ maxWidth: 345 }}>
-            <CardMedia
-              sx={{ height: 140 }}
-              image={item.flickr_images}
-              title="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {item.rocket_name}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {item.description}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">{item.company}</Button>
-              <Button size="small">{item.rocket_type}</Button>
-            </CardActions>
-          </Card>
+          <Grid item key={item.rocket_id} xs={6}>
+            <Card>
+              <CardMedia
+                sx={{ height: 500 }}
+                image={item.flickr_images}
+                title="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {item.rocket_name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {item.description}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">{item.company}</Button>
+                <Button size="small">{item.rocket_type}</Button>
+              </CardActions>
+            </Card>
+          </Grid>
         ))}
       </Grid>
     </div>
