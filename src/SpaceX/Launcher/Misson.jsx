@@ -1,16 +1,15 @@
+//
+
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Launcher from "./Launcher";
-import Carsels from "./Carsels";
-import Mission from "./Misson";
-const Carsel = () => {
+const Mission = () => {
   return (
     <div>
       <Box position="relative">
         <LazyLoadImage
           effect="blur"
-          src="https://sxcontent9668.azureedge.us/cms-assets/assets/PSN_Satria_pad39a_DSC_6855_desktop_6dd3f9c0d0.jpg"
+          src="https://sxcontent9668.azureedge.us/cms-assets/assets/STARSHIP_Testflight_DESKTOP_2b3bea613a.jpg"
           alt=""
           style={{ width: "100%" }}
         />
@@ -33,7 +32,7 @@ const Carsel = () => {
               fontFamily: "sans-serif",
             }}
           >
-            Upcoming Launch
+            RECENT LAUNCH
           </Typography>
           <Typography
             gutterBottom
@@ -41,18 +40,12 @@ const Carsel = () => {
             component="div"
             style={{ fontWeight: "900", fontSize: "2.5rem" }}
           >
-            STARLINK MISSION
+            Starship Flight Test
           </Typography>
         </Box>
       </Box>
-      <Launcher />
-      <Mission />
-      <Carsels />
-
-      <br />
-      <br />
     </div>
   );
 };
 
-export default Carsel;
+export default Mission;
