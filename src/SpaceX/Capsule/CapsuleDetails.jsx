@@ -46,7 +46,6 @@ export default function CapsuleDetails() {
       .then((response) => {
         setCapsuleData(response.data[0]);
         setIsLoading(false);
-        console.log(response);
       })
       .catch((error) => {
         console.error(error);

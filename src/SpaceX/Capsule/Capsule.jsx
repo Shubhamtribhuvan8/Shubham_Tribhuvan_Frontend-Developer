@@ -41,7 +41,6 @@ export default function CapsuleSearchForm({ onSearch }) {
       .get("https://api.spacexdata.com/v3/capsules", { params: queryParams })
       .then((response) => {
         setSearchResults(response.data);
-        console.log(response.data);
       })
       .catch((error) => {
         console.error(error);

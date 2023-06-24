@@ -9,7 +9,6 @@ export default function Capsulesearch() {
     axios
       .get("https://api.spacexdata.com/v3/capsules", { params: queryParams })
       .then((response) => {
-        console.log(response.data);
         setSearchResults(response.data);
       })
       .catch((error) => {
